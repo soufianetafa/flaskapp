@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Prédiction EN EUROPE</title>
+    <meta name="viewport" content="width=device-width,
+      initial-scale=1.0"/>
+    <link rel="stylesheet" href="../css/style1.css" />
+
+    <style>
+      body{
+        background: url(../image/bg1.jpg);
+    background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="form-title">Prédiction EN EUROPE</h1>
+      <form action="#">
+        <div class="main-user-info">
+          
+          <div class="user-input-box">
+            <label for="Area">Pays</label>
+            <input type="text"
+                    id="Area"
+                    name="Area"
+                    placeholder="Entrer le nom du pays"/>
+          </div>
+          
+          <div class="user-input-box">
+            <label for="Continent">Continent</label>
+            <input type="text"
+                    id="Continent"
+                    name="Continent"
+                    value="Europe"
+                    readonly
+                    />
+          </div>
+
+          <div class="user-input-box">
+            <label for="Year">Année</label>
+            <input type="number"
+                    id="Year"
+                    name="Year"
+                    placeholder="Entrer l'année"/>
+          </div>
+
+
+          <div class="user-input-box" >
+            <label for="Article">Article</label>
+            <input type="text"
+                    id="Article"
+                    name="Article"
+                    placeholder="Entrer le nom d'article"/>
+          </div>
+
+          <div class="user-input-box" >
+            <label for="region">Région</label>
+            <select id="region" name="region">
+              <option value="Southern Europe">Southern Europe</option>
+              <option value="Western Europe">Western Europe</option>
+              <option value="Eastern Europe">Eastern Europe</option>
+              <option value="ENorthern Europe">Northern Europe</option>
+              
+          </select>
+          </div>
+        </div>
+
+
+
+
+        <div class="elemnt-details-box">
+          <span class="gender-title">Élément</span>
+          <div class="gender-category">
+            <input type="radio" name="element" id="production">
+            <label for="production">Production</label>
+            <input type="radio" name="element" id="area_har">
+            <label for="area_har">Area harvested</label>
+            
+          </div>
+        </div>
+        <div class="form-submit-btn">
+          <input type="submit" value="Prédir">
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

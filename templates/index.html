@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Préduction Du Quantité</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='image/favicon.png') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        i{
+            color: #f1683a;
+            font-weight: bold;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav-logo">
+            <a href="{{ url_for('index') }}">PREDICT<i class="fas fa-chart-bar"></i>.</a>
+        </nav>
+    </header>
+
+    <!-- carousel -->
+    <div class="carousel">
+        <!-- list item -->
+        <div class="list">
+            <div class="item">
+                <img src="{{ url_for('static', filename='image/img1.jpg') }}">
+                <div class="content">
+                    <div class="author">S I A</div>
+                    <div class="title">Prédiction En</div>
+                    <div class="topic">AFRIQUE</div>
+                    <div class="des">
+                        Prédire la quantité agricole future en fonction de divers facteurs en afrique.
+                    </div>
+                    <div class="buttons">
+                        <button onclick="window.location.href='{{ url_for('pred_africa') }}'">Commencer</button>
+                        <button onclick="window.location.href='{{ url_for('static', filename='data/africa.html') }}'">Données</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{ url_for('static', filename='image/img2.jpg') }}">
+                <div class="content">
+                    <div class="author">S I A</div>
+                    <div class="title">Prédiction En</div>
+                    <div class="topic">AMÉRIQUE</div>
+                    <div class="des">
+                        Prédire la quantité agricole future en fonction de divers facteurs en amérique.
+                    </div>
+                    <div class="buttons">
+                        <button onclick="window.location.href='{{ url_for('pred_america') }}'">Commencer</button>
+                        <button onclick="window.location.href='{{ url_for('static', filename='data/america.html') }}'">Données</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{ url_for('static', filename='image/img3.jpg') }}">
+                <div class="content">
+                    <div class="author">S I A</div>
+                    <div class="title">Prédiction En</div>
+                    <div class="topic">ASIE</div>
+                    <div class="des">
+                        Prédire la quantité agricole future en fonction de divers facteurs en asie.
+                    </div>
+                    <div class="buttons">
+                        <button onclick="window.location.href='{{ url_for('pred_asie') }}'">Commencer</button>
+                        <button onclick="window.location.href='{{ url_for('static', filename='data/Asia.html') }}'">Données</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{ url_for('static', filename='image/img4.jpg') }}">
+                <div class="content">
+                    <div class="author">S I A</div>
+                    <div class="title">Prédiction En</div>
+                    <div class="topic">EUROPE</div>
+                    <div class="des">
+                        Prédire la quantité agricole future en fonction de divers facteurs en europe.
+                    </div>
+                    <div class="buttons">
+                        <button onclick="window.location.href='{{ url_for('pred_europe') }}'">Commencer</button>
+                        <button onclick="window.location.href='{{ url_for('static', filename='data/europe.html') }}'">Données</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- list thumnail -->
+        <div class="thumbnail">
+            <div class="item">
+                <img src="{{ url_for('static', filename='image/img1.jpg') }}">
+                <div class="content">
+                    <div class="title">AFRIQUE</div>
+                    <div class="description">Prédir En</div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{ url_for('static', filename='image/img2.jpg') }}">
+                <div class="content">
+                    <div class="title">AMÉRIQUE</div>
+                    <div class="description">Prédir En</div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{ url_for('static', filename='image/img3.jpg') }}">
+                <div class="content">
+                    <div class="title">ASIE</div>
+                    <div class="description">Prédir En</div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{ url_for('static', filename='image/img4.jpg') }}">
+                <div class="content">
+                    <div class="title">EUROPE</div>
+                    <div class="description">Prédir En</div>
+                </div>
+            </div>
+        </div>
+        <!-- next prev -->
+        <div class="arrows">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+        <!-- time running -->
+        <div class="time"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Prédiction EN EUROPE</title>
+    <meta name="viewport" content="width=device-width,
+      initial-scale=1.0"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}" />
+
+    <style>
+      body{
+        background: url({{ url_for('static', filename='image/bg1.jpg') }});
+    background-size: cover;
+      }
+      .prediction-result {
+        margin-top: 20px;
+        padding: 15px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        font-size: 1.5em;
+        color: black;
+        font-weight : bold;
+      }
+      .form-submit-btn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 40px;
+    }
+    .form-submit-btn input, .form-submit-btn a {
+        display: block;
+        width: 48%;
+        margin-top: 10px;
+        font-size: 20px;
+        padding: 10px;
+        border: none;
+        border-radius: 3px;
+        text-align: center;
+        color: rgb(209, 209, 209);
+        background: rgba(63, 114, 76, 0.7);
+        text-decoration: none;
+    }
+    .form-submit-btn input:hover, .form-submit-btn a:hover {
+        background: rgba(56, 204, 93, 0.7);
+        color: rgb(255, 255, 255);
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="form-title">Prédiction EN EUROPE</h1>
+      <form method="POST">
+        <div class="main-user-info">
+          
+          <div class="user-input-box">
+            <label for="area">Pays</label>
+            <input type="text"
+                    id="area"
+                    name="area"
+                    placeholder="Entrer le nom du pays"/>
+          </div>
+          
+          
+
+          <div class="user-input-box">
+            <label for="year">Année</label>
+            <input type="number"
+                    id="year"
+                    name="year"
+                    placeholder="Entrer l'année"/>
+          </div>
+
+
+          <div class="user-input-box" >
+            <label for="item">Article</label>
+            <input type="text"
+                    id="item"
+                    name="item"
+                    placeholder="Entrer le nom d'article"/>
+          </div>
+
+          <div class="user-input-box" >
+            <label for="region">Région</label>
+            <select id="region" name="region">
+              <option name ="region" value="Southern Europe">Southern Europe</option>
+              <option name="region" value="Western Europe">Western Europe</option>
+              <option name="region" value="Eastern Europe">Eastern Europe</option>
+              <option name="region" value="ENorthern Europe">Northern Europe</option>
+              
+          </select>
+          </div>
+        </div>
+
+
+
+
+        <div class="elemnt-details-box">
+          <span class="gender-title">Élément</span>
+          <div class="gender-category">
+            <input type="radio" name="element" id="production" value="Production">
+            <label for="production">Production</label>
+            <input type="radio" name="element" id="area_har" value="Area harvested">
+            <label for="area_har">Area harvested</label>
+            
+          </div>
+        </div>
+        <div class="form-submit-btn">
+          <input type="submit" value="Prédire">
+          <a href="{{ url_for('index') }}" >Retour à l'accueil</a>
+        </div>
+      </form>
+      {% if prediction %}
+      <div class="prediction-result">
+          {% if element == 'Production' %}
+              Quantité Prédite: {{ prediction }} Tonnes
+          {% elif element == 'Area harvested' %}
+              Quantité Prédite: {{ prediction }} Hectares
+          {% endif %}
+      </div>
+  {% endif %}
+    </div>
+  </body>
+</html>

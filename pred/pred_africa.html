@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Prédiction En AFRIQUE</title>
+    <meta name="viewport" content="width=device-width,
+      initial-scale=1.0"/>
+    <link rel="stylesheet" href="../css/style1.css" />
+
+    <style>
+      body{
+        background: url(../image/bg2.jpg);
+    background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="form-title">Prédiction En AFRIQUE</h1>
+      <form action="#">
+        <div class="main-user-info">
+          
+          <div class="user-input-box">
+            <label for="Area">Pays</label>
+            <input type="text"
+                    id="Area"
+                    name="Area"
+                    placeholder="Entrer le nom du pays"/>
+          </div>
+          <div class="user-input-box">
+            <label for="Continent">Continent</label>
+            <input type="text"
+                    id="Continent"
+                    name="Continent"
+                    placeholder="Entrer le nom du continent"
+                    value="Africa"
+                    readonly/>
+          </div>
+
+
+          <div class="user-input-box">
+            <label for="Year">Année</label>
+            <input type="number"
+                    id="Year"
+                    name="Year"
+                    min="1960"
+                    placeholder="Entrer l'année"/>
+          </div>
+
+
+          <div class="user-input-box" >
+            <label for="Article">Article</label>
+            <input type="text"
+                    id="Article"
+                    name="Article"
+                    placeholder="Entrer le nom d'article"/>
+          </div>
+          
+        </div>
+        <div class="region-details-box">
+          <spa<n class="gender-title">Région</span>
+          <div class="gender-category">
+            <input type="radio" name="=region" id="north">
+            <label for="north">Northern Africa</label>
+            <input type="radio" name="region" id="sub">
+            <label for="sub">Sub-Saharan Africa</label>
+            
+          </div>
+        </div>
+        <div class="element-details-box">
+          <spa<n class="gender-title">Élément</span>
+          <div class="gender-category">
+            <input type="radio" name="element" id="production">
+            <label for="production">Production</label>
+            <input type="radio" name="element" id="area_har">
+            <label for="area_har">Area harvested</label>
+            
+          </div>
+        </div>
+        <div class="form-submit-btn">
+          <input type="submit" value="Prédir">
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
